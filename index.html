@@ -1,40 +1,551 @@
 <!DOCTYPE html>
-<html><head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Stambhadri Flexi</title>
-<link rel="stylesheet" href="style.css">
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>స్టంభాద్రి ఫ్లెక్సి | Stambhadri Flexi</title>
+    <meta name="description" content="Stambhadri Flexi - Printing & Signage Solutions in Khammam">
+
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Telugu:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <!-- Embedded CSS from style.css -->
+    <style>
+        /* ===========================
+           STAMBHADRI FLEXI
+           Modern Business Website
+        =========================== */
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+
+        html{
+            scroll-behavior:smooth;
+        }
+
+        body{
+            font-family:'Poppins','Noto Sans Telugu',sans-serif;
+            background:#f7f9fc;
+            color:#333;
+            line-height:1.7;
+        }
+
+        .container{
+            width:90%;
+            max-width:1200px;
+            margin:auto;
+        }
+
+        section{
+            padding:70px 0;
+        }
+
+        .section-title{
+            text-align:center;
+            margin-bottom:45px;
+        }
+
+        .section-title h2{
+            color:#0d47a1;
+            font-size:36px;
+            margin-bottom:10px;
+        }
+
+        .section-title p{
+            color:#666;
+            font-size:18px;
+        }
+
+        /* ===========================
+           HERO
+        =========================== */
+
+        .hero{
+            position:relative;
+            width:100%;
+            overflow:hidden;
+        }
+
+        .hero-image{
+            width:100%;
+            height:520px;
+            object-fit:cover;
+            display:block;
+        }
+
+        .hero-overlay{
+            position:absolute;
+            inset:0;
+            background:linear-gradient(rgba(0,0,0,.15), rgba(0,0,0,.75));
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            text-align:center;
+            padding:20px;
+        }
+
+        .hero-content{
+            color:white;
+        }
+
+        .hero-content h3{
+            letter-spacing:4px;
+            font-weight:500;
+            margin-bottom:10px;
+        }
+
+        .hero-content h1{
+            font-size:60px;
+            font-family:'Noto Sans Telugu',sans-serif;
+            margin-bottom:10px;
+        }
+
+        .hero-content h2{
+            font-size:30px;
+            letter-spacing:2px;
+            margin-bottom:20px;
+        }
+
+        .hero-content p{
+            font-size:20px;
+        }
+
+        .tagline{
+            margin-top:30px;
+            display:flex;
+            justify-content:center;
+            gap:15px;
+            flex-wrap:wrap;
+        }
+
+        .tagline span{
+            background:rgba(255,255,255,.15);
+            backdrop-filter:blur(10px);
+            border:1px solid rgba(255,255,255,.3);
+            padding:12px 22px;
+            border-radius:30px;
+            font-weight:600;
+        }
+
+        /* ===========================
+        ABOUT
+        =========================== */
+
+        .about{
+            background:white;
+        }
+
+        .about .container{
+            background:white;
+            border-radius:20px;
+            padding:50px;
+            box-shadow:0 15px 40px rgba(0,0,0,.08);
+        }
+
+        .about p{
+            margin-bottom:18px;
+            font-size:18px;
+            text-align:center;
+        }
+
+        /* ===========================
+        SERVICES
+        =========================== */
+
+        .services{
+            background:linear-gradient(180deg,#f7fbff,#eef6ff);
+        }
+
+        .service-list{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+            gap:20px;
+        }
+
+        .service-item{
+            display:flex;
+            align-items:center;
+            gap:18px;
+            background:white;
+            padding:22px;
+            border-radius:15px;
+            box-shadow:0 10px 30px rgba(0,0,0,.08);
+            transition:.3s;
+        }
+
+        .service-item:hover{
+            transform:translateY(-6px);
+            box-shadow:0 20px 40px rgba(0,0,0,.15);
+        }
+
+        .service-item i{
+            width:55px;
+            height:55px;
+            border-radius:50%;
+            background:linear-gradient(135deg,#1565c0,#42a5f5);
+            color:white;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            font-size:22px;
+        }
+
+        .service-item span{
+            font-size:18px;
+            font-weight:600;
+        }
+
+        /* ===========================
+        CONTACT SECTION
+        =========================== */
+
+        .contact{
+            background:#ffffff;
+        }
+
+        .contact-wrapper{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+            gap:30px;
+        }
+
+        .contact-card{
+            background:linear-gradient(135deg,#ffffff,#f8fbff);
+            border-left:6px solid #1565c0;
+            border-radius:20px;
+            padding:35px;
+            text-align:center;
+            box-shadow:0 15px 35px rgba(0,0,0,.08);
+            transition:.35s;
+        }
+
+        .contact-card:hover{
+            transform:translateY(-8px);
+            box-shadow:0 25px 45px rgba(0,0,0,.15);
+        }
+
+        .contact-card i{
+            width:70px;
+            height:70px;
+            line-height:70px;
+            font-size:28px;
+            color:#fff;
+            background:linear-gradient(135deg,#1565c0,#42a5f5);
+            border-radius:50%;
+            margin-bottom:18px;
+        }
+
+        .contact-card h3{
+            color:#0d47a1;
+            margin-bottom:10px;
+            font-size:24px;
+        }
+
+        .contact-card a{
+            color:#ff6f00;
+            text-decoration:none;
+            font-size:22px;
+            font-weight:700;
+        }
+
+        .contact-card a:hover{
+            color:#1565c0;
+        }
+
+        /* ===========================
+        LOCATION
+        =========================== */
+
+        .location{
+            background:linear-gradient(180deg,#eef6ff,#ffffff);
+        }
+
+        .location-box{
+            max-width:650px;
+            margin:auto;
+            text-align:center;
+            background:#fff;
+            border-radius:20px;
+            padding:40px;
+            box-shadow:0 15px 35px rgba(0,0,0,.08);
+        }
+
+        .location-box p{
+            margin-bottom:12px;
+            font-size:18px;
+        }
+
+        .map-button{
+            display:inline-block;
+            margin-top:25px;
+            padding:15px 35px;
+            background:linear-gradient(135deg,#1565c0,#0d47a1);
+            color:#fff;
+            border-radius:40px;
+            text-decoration:none;
+            font-size:18px;
+            font-weight:600;
+            transition:.3s;
+        }
+
+        .map-button:hover{
+            background:linear-gradient(135deg,#ff9800,#ff6f00);
+            transform:translateY(-3px);
+        }
+
+        /* ===========================
+        FOOTER
+        =========================== */
+
+        footer{
+            background:linear-gradient(135deg,#0d47a1,#1976d2);
+            color:#fff;
+            text-align:center;
+            padding:50px 20px;
+        }
+
+        footer h2{
+            font-family:'Noto Sans Telugu',sans-serif;
+            font-size:34px;
+            margin-bottom:8px;
+        }
+
+        footer h3{
+            letter-spacing:2px;
+            font-weight:500;
+            margin-bottom:15px;
+        }
+
+        footer p{
+            opacity:.9;
+            margin-bottom:6px;
+        }
+
+        /* ===========================
+        SCROLLBAR
+        =========================== */
+
+        ::-webkit-scrollbar{
+            width:10px;
+        }
+
+        ::-webkit-scrollbar-track{
+            background:#edf2f7;
+        }
+
+        ::-webkit-scrollbar-thumb{
+            background:#1565c0;
+            border-radius:30px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover{
+            background:#0d47a1;
+        }
+
+        /* ===========================
+        RESPONSIVE
+        =========================== */
+
+        @media(max-width:900px){
+            .hero-image{
+                height:420px;
+            }
+            .hero-content h1{
+                font-size:42px;
+            }
+            .hero-content h2{
+                font-size:24px;
+            }
+            .tagline{
+                flex-direction:column;
+                align-items:center;
+            }
+            .about .container{
+                padding:35px;
+            }
+            .section-title h2{
+                font-size:30px;
+            }
+        }
+
+        @media(max-width:600px){
+            .hero-image{
+                height:320px;
+            }
+            .hero-content h1{
+                font-size:30px;
+            }
+            .hero-content h2{
+                font-size:20px;
+            }
+            .hero-content p{
+                font-size:16px;
+            }
+            .tagline span{
+                font-size:14px;
+                padding:10px 16px;
+            }
+            .service-item{
+                padding:18px;
+            }
+            .service-item span{
+                font-size:16px;
+            }
+            .contact-card{
+                padding:28px;
+            }
+            .contact-card a{
+                font-size:18px;
+            }
+            .location-box{
+                padding:28px;
+            }
+            .section-title h2{
+                font-size:26px;
+            }
+        } 
+    </style>
 </head>
+
 <body>
-<header class="hero">
-<h1>STAMBHADRI FLEXI</h1>
-<p>Quality Printing • Creative Signage • Fast Service</p>
-</header>
-<section class="card">
-<h2>About Us</h2>
-<p>We provide high-quality printing and signage solutions for businesses, events and personal projects in Khammam.</p>
-</section>
-<section class="card">
-<h2>Our Services</h2>
-<ul>
-<li>Normal Flex Printing</li>
-<li>Star Flex Printing</li>
-<li>Backlit Flex Printing</li>
-<li>Vinyl Printing</li>
-<li>Thermocol Letter Cutting</li>
-<li>Foam Design Cutting</li>
-<li>Banner Printing</li>
-<li>Custom Printing Solutions</li>
-</ul>
-</section>
-<section class="card">
-<h2>Contact</h2>
-<p><strong>Shashideep</strong><br><a href="tel:8309150090">8309150090</a></p>
-<p><strong>Mohan</strong><br><a href="tel:9440357735">9440357735</a></p>
-</section>
-<section class="card">
-<h2>Visit Us</h2>
-<p>Beside Shadi Khana,<br>Opposite Old Municipal Office,<br>Khammam</p>
-<p><a class="btn" href="https://maps.app.goo.gl/YgzuASgu7izx8sRGA" target="_blank">Open Google Maps</a></p>
-</section>
-<footer>© Stambhadri Flexi</footer>
-</body></html>
+
+    <!-- HERO SECTION -->
+    <header class="hero">
+        <img src="banner.jpg" class="hero-image" alt="Stambhadri Flexi">
+        <div class="hero-overlay">
+            <div class="hero-content">
+                <h3>Welcome To</h3>
+                <h1>స్టంభాద్రి ఫ్లెక్సి</h1>
+                <h2>STAMBHADRI FLEXI</h2>
+                <p><strong>Your Trusted Printing Partner in Khammam</strong></p>
+                <div class="tagline">
+                    <span>Quality Printing</span>
+                    <span>Creative Designs</span>
+                    <span>Fast Service</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ABOUT -->
+    <section class="about">
+        <div class="container">
+            <div class="section-title">
+                <h2>🙏 Welcome | స్వాగతం</h2>
+            </div>
+            <p><strong>Stambhadri Flexi</strong> కి స్వాగతం.</p>
+            <p>మేము <strong>High Quality Printing & Signage Solutions</strong> అందిస్తున్నాము.</p>
+            <p>మీ Business Promotion, Shop Boards, Political Campaigns, Events, Advertising, Celebrations మరియు అన్ని రకాల Printing అవసరాలకు నాణ్యమైన సేవలను అందిస్తున్నాము.</p>
+            <p>మా లక్ష్యం <strong>"Quality Work • Timely Delivery • Customer Satisfaction"</strong></p>
+        </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="services">
+        <div class="container">
+            <div class="section-title">
+                <h2>🛠️ Our Services | మా సేవలు</h2>
+                <p>Quality Printing Solutions for Every Need</p>
+            </div>
+
+            <div class="service-list">
+                <div class="service-item">
+                    <i class="fa-solid fa-print"></i>
+                    <span>Normal Flex Printing</span>
+                </div>
+                <div class="service-item">
+                    <i class="fa-solid fa-star"></i>
+                    <span>Star Flex Printing</span>
+                </div>
+                <div class="service-item">
+                    <i class="fa-solid fa-lightbulb"></i>
+                    <span>Backlit Flex Printing</span>
+                </div>
+                <div class="service-item">
+                    <i class="fa-solid fa-palette"></i>
+                    <span>Vinyl Printing</span>
+                </div>
+                <div class="service-item">
+                    <i class="fa-solid fa-scissors"></i>
+                    <span>Thermocol Letter Cutting</span>
+                </div>
+                <div class="service-item">
+                    <i class="fa-solid fa-cube"></i>
+                    <span>Foam Design Cutting</span>
+                </div>
+                <div class="service-item">
+                    <i class="fa-solid fa-store"></i>
+                    <span>Shop Boards & Sign Boards</span>
+                </div>
+                <div class="service-item">
+                    <i class="fa-solid fa-bullhorn"></i>
+                    <span>Event & Advertising Printing</span>
+                </div>
+                <div class="service-item">
+                    <i class="fa-solid fa-pen-ruler"></i>
+                    <span>Custom Printing Solutions</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>📞 Contact Us | సంప్రదించండి</h2>
+                <p>మా టీమ్ మీకు సహాయం చేయడానికి ఎల్లప్పుడూ సిద్ధంగా ఉంటుంది.</p>
+            </div>
+
+            <div class="contact-wrapper">
+                <div class="contact-card">
+                    <i class="fa-solid fa-user"></i>
+                    <h3>Shashideep</h3>
+                    <a href="tel:8309150090">8309150090</a>
+                </div>
+                <div class="contact-card">
+                    <i class="fa-solid fa-user"></i>
+                    <h3>Mohan</h3>
+                    <a href="tel:9440357735">9440357735</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- LOCATION -->
+    <section class="location">
+        <div class="container">
+            <div class="section-title">
+                <h2>📍 Location | మా చిరునామా</h2>
+            </div>
+            <div class="location-box">
+                <p><strong>Stambhadri Flexi</strong></p>
+                <p>Beside Shadi Khana</p>
+                <p>Opposite Old Municipal Office</p>
+                <p>Khammam</p>
+                <a class="map-button" href="https://maps.app.goo.gl/YgzuASgu7izx8sRGA" target="_blank">
+                    <i class="fa-solid fa-location-dot"></i> Open Google Maps
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <h2>స్టంభాద్రి ఫ్లెక్సి</h2>
+            <h3>STAMBHADRI FLEXI</h3>
+            <p>Quality • Trust • Service</p>
+            <p>Thank You For Visiting ❤️</p>
+        </div>
+    </footer>
+
+</body>
+</html>
